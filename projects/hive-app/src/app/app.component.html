@@ -1,0 +1,22 @@
+<app-tabs>
+  <app-tab title="Home">
+    <ng-template #content let-data="teste">
+      <p>Some random HTML with some random Home - {{ data }}</p>
+      <form *ngIf="form" (ngSubmit)="onSave()">
+        <!-- <lib-input-text formControlName="nome" [(ngModel)]="nome" [formControl]="form.get('nome')"></lib-input-text><br> -->
+        <lib-input-text name="nome" [(ngModel)]="nome"></lib-input-text><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </ng-template>
+  </app-tab>
+  <app-tab title="Contact">
+    <ng-template #content let-data="teste">
+      <p>Some random HTML with some random Contac - {{ data }}</p>
+    </ng-template>
+  </app-tab>
+  <app-tab title="teste">
+    <ng-template #content let-data="teste">
+      <p>Some random HTML with some random teste - {{ data }}</p>
+    </ng-template>
+  </app-tab>
+</app-tabs>
